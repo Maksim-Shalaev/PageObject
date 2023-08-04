@@ -78,6 +78,17 @@ class MoneyTransferTest {
         moneyTransfer.transferForm(sum, infoCard);
         moneyTransfer.findErrorMessage("Сумма превышает остаток средств на вашей карте");
     }
+
+    @Test
+    void shouldNotTransferBetweenOneCard() {
+        val dashboardPage = new DashboardPage();
+        int balanceFirstCard = dashboardPage.getFirstCardBalance();
+        val moneyTransfer = dashboardPage.firstCardButton();
+        val infoCard = DataHelper.getFirstCardNumber();
+        String sum = String.valueOf(DataHelper.generateInvalidAmount(balanceFirstCard));
+        moneyTransfer.transferForm(sum, infoCard);
+        moneyTransfer.findErrorMessage("Перевод внутри одной карты невозможен");
+    }
 }
 
 
