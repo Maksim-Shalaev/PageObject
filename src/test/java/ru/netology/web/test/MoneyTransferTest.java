@@ -69,7 +69,7 @@ class MoneyTransferTest {
 
 
     @Test
-    void negativeTransferFirstCardTSecond() {
+    void negativeTransferFirstCardToSecond() {
         val dashboardPage = new DashboardPage();
         int balanceFirstCard = dashboardPage.getFirstCardBalance();
         val moneyTransfer = dashboardPage.firstCardButton();
