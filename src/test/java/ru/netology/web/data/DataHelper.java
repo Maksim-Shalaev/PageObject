@@ -37,7 +37,7 @@ public class DataHelper {
   }
 
   public static CardNumber getFirstCardNumber() {
-    return new CardNumber("5559 0000 0000 0000");
+    return new CardNumber("5559 0000 0000 0001");
   }
 
   public static CardNumber getSecondCardNumber() {
