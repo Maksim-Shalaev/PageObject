@@ -36,6 +36,12 @@ class MoneyTransferTest {
         assertEquals(balanceFirstCard + Integer.parseInt(sum), dashboardPage.getFirstCardBalance());
         assertEquals(balanceSecondCard - Integer.parseInt(sum), dashboardPage.getSecondCardBalance());
     }
+
+    @Test
+    void positiveTransferFirstCardToSecond() {
+        val dashboardPage = new DashboardPage();
+
+    }
 }
 
 
